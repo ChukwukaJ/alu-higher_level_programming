@@ -6,3 +6,4 @@ const user = {
 console.log(user);
 user.value = 89;
 console.log(user);
+
