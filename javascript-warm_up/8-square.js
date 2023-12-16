@@ -1,12 +1,10 @@
 #!/usr/bin/node
-const user = process.argv.slice(2);
-// converting first argument to an integer
-if (isNaN(parseInt(user[0]))) {
-  console.log('Missing size');
+const { argv } = require('process');
+const xTimes = parseInt(argv[2]);
+if (isNaN(xTimes)) {
+  console.log('Missing number of occurrences');
 } else {
-  let i = 0;
-  while (i < user[0]) {
-    console.log('X'.repeat(user[0]));
-    i++;
+  for (let i = 0; i < xTimes; i++) {
+    console.log('C is fun');
   }
 }

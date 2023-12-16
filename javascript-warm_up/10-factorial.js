@@ -1,16 +1,16 @@
 #!/usr/bin/node
-const user = process.argv.slice(2);
-function factorial (a) {
-  if (a < 1) {
-    return 1;
-  } else {
-    return a * factorial(a - 1);
-  }
-}
-
-const a = parseInt(user[0]);
-if (isNaN(a)) {
+const { argv } = require('process');
+const argument = parseInt(argv[2]);
+if (isNaN(argument)) {
   console.log(1);
 } else {
-  console.log(factorial(a));
+  const result = factorial(argument);
+  console.log(result);
+}
+function factorial (value) {
+  if (value === 0) {
+    return 1;
+  } else {
+    return value * factorial(value - 1);
+  }
 }

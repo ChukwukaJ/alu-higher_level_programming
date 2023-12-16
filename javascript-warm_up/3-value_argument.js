@@ -1,7 +1,13 @@
 #!/usr/bin/node
-const user = process.argv.slice(2);
-if (user[0] == null) {
+const { argv } = require('process');
+let i = 0;
+let elementCount = 0;
+while (argv[i]) {
+  elementCount++;
+  i++;
+}
+if (elementCount <= 2) {
   console.log('No argument');
 } else {
-  console.log(user[0]);
+  console.log(argv[2]);
 }

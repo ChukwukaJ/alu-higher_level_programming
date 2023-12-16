@@ -1,3 +1,3 @@
 #!/usr/bin/node
-const user = process.argv.slice(2);
-console.log(user[0] + ' is ' + user[1]);
+const { argv } = require('process');
+console.log(argv[2] + ' is ' + argv[3]);
